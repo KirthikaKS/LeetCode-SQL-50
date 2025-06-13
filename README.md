@@ -9,3 +9,10 @@ Created with :heart: by [LeetPush](https://github.com/husamahmud/LeetPush)
  - Hüsam: [GitHub](https://github.com/husamahmud) - [LinkedIn](https://www.linkedin.com/in/husamahmud/)
 
  Happy coding! 🚀
+<!---LeetCode Topics Start-->
+# LeetCode Topics
+## Database
+|  |
+| ------- |
+| [1811-fix-names-in-a-table](https://github.com/KirthikaKS/LeetCode-SQL-50/tree/master/1811-fix-names-in-a-table) |
+<!---LeetCode Topics End-->

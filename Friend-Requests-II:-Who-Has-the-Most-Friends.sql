@@ -1,19 +1,9 @@
-# Write your MySQL query statement below
-WITH REQUESTER AS (SELECT REQUESTER_ID AS RID, COUNT(*) AS RCOUNT
-                   FROM REQUESTACCEPTED 
-                   GROUP BY 1),
+-- Write your PostgreSQL query statement below
 
-ACCEPTER AS (SELECT ACCEPTER_ID AS AID, COUNT(*) AS ACOUNT
-                  FROM REQUESTACCEPTED 
-                  GROUP BY 1),
-
-CTE AS (SELECT * FROM REQUESTER
-             UNION ALL
-             SELECT * FROM ACCEPTER)
-
-SELECT RID AS id, SUM(RCOUNT) AS num
-FROM CTE 
-GROUP BY 1
-ORDER BY SUM(RCOUNT) DESC
+SELECT id, count(*) as num
+FROM (SELECT requester_id as id FROM RequestAccepted 
+      UNION ALL
+      SELECT accepter_id as id FROM RequestAccepted)
+GROUP BY id
+ORDER BY num DESC
 LIMIT 1
-
